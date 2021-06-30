@@ -8,8 +8,8 @@
 typedef struct utils {
         int myInt;
         void (*ShowIntAdress) (int* param);
-        
-
+        void (*ShowIntValueAdress) (int param);
+        void (*modifyVariablesAddress) (int dir1, int* dir2, int multiplo );
 }UTILS;
 
 typedef struct  array
@@ -89,12 +89,6 @@ void fillArray( int array[],  size_t tam ){
 
 
 
-
-
-
-
-
-
 void printArray1D( int array[], size_t tam   ){
 
         for (size_t i = 0; i < tam; i++)
@@ -105,7 +99,6 @@ void printArray1D( int array[], size_t tam   ){
         return;
         
 }
-
 
 
 Array* returnArray( ){
