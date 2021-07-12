@@ -7,9 +7,12 @@
 //objeto//
 typedef struct utils {
         int myInt;
-        void (*ShowIntAdress) (int* param);
-        void (*ShowIntValueAdress) (int param);
-        void (*modifyVariablesAddress) (int dir1, int* dir2, int multiplo );
+        void (*ShowIntAdress) (int* param); //a pointer 
+        //add more pointer to catch functions address//
+        //void swap( int* ptr1, int* ptr2)
+        void (*mySwap) (int* ptr1, int* ptr2);
+        
+        
 }UTILS;
 
 typedef struct  array
@@ -55,6 +58,10 @@ void ShowIntValueAdress(  int* param  ){
         printf( "value: %i\n", *param );
 }
 
+void ShowFloatAdress(  int* param  ){
+        printf( "address: %p\n", param );
+}
+
 void modifyVariablesAddress( int* dir1   ,  int* dir2, int multiplo ){
         ShowIntAdress(dir1);
         ShowIntValueAdress(dir1);
@@ -69,7 +76,7 @@ void swap( int* ptr1, int* ptr2){
         *ptr1 = *ptr2;
         *ptr2 = temp;
         return;
-        printf("Hola mundo!");
+        printf("Hola munda!");
 }
 
 // void swapGobal(){
@@ -89,6 +96,12 @@ void fillArray( int array[],  size_t tam ){
 
 
 
+
+
+
+
+
+
 void printArray1D( int array[], size_t tam   ){
 
         for (size_t i = 0; i < tam; i++)
@@ -99,6 +112,7 @@ void printArray1D( int array[], size_t tam   ){
         return;
         
 }
+
 
 
 Array* returnArray( ){
