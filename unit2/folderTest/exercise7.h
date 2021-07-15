@@ -14,4 +14,5 @@ typedef struct robot
 
 void sayHelloToRobot(ROBOT a_robot){
     printf( "%s", "hello Tiago", a_robot.name);
+    scanf("%s", a_robot.name);
 }
